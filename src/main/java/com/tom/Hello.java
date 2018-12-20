@@ -2,9 +2,10 @@ package com.tom;
 
 public class Hello {
     public static void main(String[] args) {
-//        System.out.println("Hello Java");
-//        new Person().hello();
-        Person person = new Person();
+        Person person = new Person(66.5f, 1.7f);
         person.hello();
+        System.out.println(person.bmi());
+        char a = 'A';
+        System.out.println(a > 60);
     }
 }

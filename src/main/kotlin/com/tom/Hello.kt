@@ -1,17 +1,24 @@
 package com.tom
 
 fun main(args: Array<String>) {
-//    println("Hello Kotlin");
-//    Human().hello();
-    val human = Human();
+    val human = Human(weight = 66.5f, height = 1.7f);
     human.hello();
-    var a : Int = 1;
-    var name : String;
-    name = "MyName";
+    println(human.bmi());
+    var a: Char = 'A';
+    println(a.toInt() > 60);
 }
 
-class Human(){
-    fun hello(){
+class Human(var name: String = "", var weight: Float, var height: Float) {
+    init {
+        println("test weight:$weight,height:$height");
+    }
+
+    //    constructor(name: String, weight: Float, height: Float): this(weight, height);
+    fun bmi(): Float {
+        return weight / (height * height);
+    }
+
+    fun hello() {
         println("Hello Kotlin");
     }
 }
