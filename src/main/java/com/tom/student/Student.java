@@ -1,8 +1,8 @@
 package com.tom.student;
 
 public class Student {
-    String id;
     String name;
+    String id;
     int english;
     int math;
 
@@ -12,8 +12,8 @@ public class Student {
         this.math = math;
     }
 
-    public void print() {
-        System.out.println(name + "\t" + english + "\t" + math + "\t" +
-                (english + math) / 2);
+    public void print(){
+        String temp=  name+ "\t"+ english +"\t" +math +"\t"+ (english+math)/2;
+        System.out.println(temp);
     }
 }
