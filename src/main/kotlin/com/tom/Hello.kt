@@ -8,6 +8,11 @@ fun main(args: Array<String>) {
     h.hello();
     println(h.bmi());
 //    test
+    var s:String?= "abcde";
+    s= null;
+    println(s?.length);
+    println(s?.get(3));
+    println(s?.substring(3));
 }
 
 class Human(var weight:Float,var height:Float,var name:String= ""){

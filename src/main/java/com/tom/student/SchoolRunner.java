@@ -1,6 +1,7 @@
 package com.tom.student;
 
 import java.util.Scanner;
+//import com.tom.student.Student;
 
 public class SchoolRunner {
     public static void main(String[] args) {
