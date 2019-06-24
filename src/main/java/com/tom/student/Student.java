@@ -13,8 +13,17 @@ public class Student {
     }
 
     public void print(){
-        String temp=  name+ "\t"+ english +"\t" +math +"\t"+ (english+math)/2;
-        System.out.println(temp);
+        String temp=  name+ "\t"+ english +"\t" +math +"\t"+ getAverage();
+        System.out.print(temp);
+        if(getAverage()>= 60){
+            System.out.println("\tPASS");
+        }else{
+            System.out.println("\tFAILED");
+        }
+    }
+
+    public int getAverage(){
+        return (english+math)/2;
     }
 
     public int highest(){

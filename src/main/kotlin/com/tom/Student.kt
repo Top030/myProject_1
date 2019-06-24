@@ -25,8 +25,12 @@ private fun userInput() {
 
 class Student(var name: String?,var english: Int,var math: Int){
     fun print(){
-        var temp: String= name+ "\t"+ english+ "\t"+ math+ "\t"+ (english+math)/2;
+        var temp: String= name+ "\t"+ english+ "\t"+ math+ "\t"+ getAverage()+ "\t"+
+                if(getAverage()>= 60) "PASS" else "FAILED";
         println(temp);
+    }
+    fun getAverage(): Int{
+        return (english+math)/2;
     }
     fun nameCheck(){
         println(name?.length)
