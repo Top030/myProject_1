@@ -5,6 +5,7 @@ public class Student {
     String id;
     int english;
     int math;
+    static int pass= 60;
 
     public Student(String name, int english, int math) {
         this.name = name;
@@ -14,7 +15,7 @@ public class Student {
 
     public void print(){
         String temp=  name+ "\t"+ english +"\t" +math +"\t"+ getAverage()+
-                "\t"+ ((getAverage()>=60)? "PASS": "FAILED");
+                "\t"+ ((getAverage()>=pass)? "PASS": "FAILED");
         System.out.print(temp);
 
         int average= getAverage();
